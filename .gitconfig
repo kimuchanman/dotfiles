@@ -1,0 +1,14 @@
+[alias]
+	br = branch
+	st = status
+	co = checkout
+	delete-merged-branches = !git --no-pager branch --merged | grep -vE '^\\*| master$| trunk$| main$| release$| develop$' | xargs git branch -d
+[user]
+	name = kimuchanman
+	email = 0811kimuchan+dev@binc.jp
+[pull]
+	rebase = false
+[push]
+	default = matching
+[core]
+	symlinks = false
