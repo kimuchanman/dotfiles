@@ -11,6 +11,7 @@ cd $DOTFILES_DIR
 # .から始まるファイルやフォルダに対して繰り返す
 for f in .??*; do
 	# シンボリックリンクを作りたくないファイルやフォルダを除外
+	[[ "$f" == ".config" ]] && continue
 	[[ "$f" == ".git" ]] && continue
 	[[ "$f" == ".gitconfig" ]] && continue
 	[[ "$f" == ".gitignore" ]] && continue
